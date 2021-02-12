@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/9/9f/Arcade_machine_icon.png"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
@@ -19,6 +23,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <i
+      style="padding: 60px; position: absolute"
+      onclick="playOrPause()"
+      class="fas fa-music"
+    >
+      <audio loop>
+        <source src="bgmusic.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </i>
     <video autoplay muted loop id="myVideo">
       <source src="bg.mp4" type="video/mp4" />
     </video>
@@ -31,5 +45,18 @@
         ></a>
       </div>
     </div>
+    <script>
+      let audio = document.querySelector("audio");
+      let playPause = 0;
+      const playOrPause = () => {
+        if (playPause == 0) {
+          playPause = 1;
+          audio.play();
+        } else {
+          playPause = 0;
+          audio.pause();
+        }
+      };
+    </script>
   </body>
 </html>

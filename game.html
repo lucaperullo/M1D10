@@ -5,10 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/9/9f/Arcade_machine_icon.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="game.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <i
+      style="padding: 60px; position: absolute"
+      onclick="playOrPause()"
+      class="fas fa-music"
+    >
+      <audio>
+        <source src="bgingamemusic.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </i>
     <video autoplay muted loop id="myVideo">
       <source src="bgingame.mp4" type="video/mp4" />
     </video>

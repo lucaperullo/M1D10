@@ -11,40 +11,74 @@ let questionCounter = 0;
 let availableQuestions = [];
 let questions = [
   {
-    question: "Hey im a question!?",
-    choice1: "yes you are",
-    choice2: "no you are not!",
-    choice3: "none of the above",
-    choice4: "who cares im aint even getting paied for this.",
-    answer: 4,
+    question: "What does CSS stand for?",
+    choice1: "Computer Style Sheets",
+    choice2: "Colorful Style Sheets",
+    choice3: "Cascading Style Sheets",
+    choice4: "none of the above",
+    answer: 3,
   },
   {
-    question: "Hey im a question!?",
-    choice1: "yes you are",
-    choice2: "no you are not!",
-    choice3: "none of the above",
-    choice4: "who cares im aint even getting paied for this.",
-    answer: 4,
+    question:
+      "Where in an HTML document is the correct place to refer to an external style sheet?",
+    choice1: "At the end of the document",
+    choice2: "In the head section",
+    choice3: "In the body section",
+    choice4: "In the css",
+    answer: 2,
   },
   {
-    question: "Hey im a question!?",
-    choice1: "yes you are",
-    choice2: "no you are not!",
-    choice3: "none of the above",
-    choice4: "who cares im aint even getting paied for this.",
-    answer: 4,
+    question: "Which HTML tag is used to define an internal style sheet?",
+    choice1: "css",
+    choice2: "script",
+    choice3: "style",
+    choice4: "stylesheet",
+    answer: 3,
   },
   {
-    question: "Hey im a question!?",
-    choice1: "yes you are",
-    choice2: "no you are not!",
-    choice3: "none of the above",
+    question: "Which HTML attribute is used to define inline styles?",
+    choice1: "styles",
+    choice2: "style",
+    choice3: "font",
+    choice4: "class",
+    answer: 2,
+  },
+  {
+    question: "Which is the correct CSS syntax?",
+    choice1: "body:color=black",
+    choice2: "{body;color:black}",
+    choice3: "body{color:black}",
+    choice4: "none of the above",
+    answer: 3,
+  },
+  {
+    question: "How do you insert a comment in a CSS file?",
+    choice1: "'this is a comment'",
+    choice2: "//this is a comment//",
+    choice3: "/*this is a comment*/",
+    choice4: "//this is a comment",
+    answer: 3,
+  },
+  {
+    question: "Which CSS property controls the text size?",
+    choice1: "font-size",
+    choice2: "text-size",
+    choice3: "font-wight",
+    choice4: "font-height",
+    answer: 1,
+  },
+  {
+    question:
+      "What is the correct CSS syntax for making all the <p> elements bold?",
+    choice1: "<p style='font-size:bold'/>",
+    choice2: "<p style='text-size:bold/>",
+    choice3: "p{text-size:bold}",
     choice4: "who cares im aint even getting paied for this.",
     answer: 4,
   },
 ];
 const SCORE_POINTS = 100;
-const MAX_QUESTIONS = 4;
+const MAX_QUESTIONS = 8;
 
 startGame = () => {
   questionsCounter = 0;
@@ -95,3 +129,14 @@ incrementScore = (num) => {
   scoreText.innerText = score;
 };
 startGame();
+let audio = document.querySelector("audio");
+let playPause = 0;
+const playOrPause = () => {
+  if (playPause == 0) {
+    playPause = 1;
+    audio.play();
+  } else {
+    playPause = 0;
+    audio.pause();
+  }
+};

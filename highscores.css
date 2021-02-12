@@ -1,5 +1,10 @@
+body {
+  font-family: "Orbitron", sans-serif;
+  color: rgb(51, 43, 36) !important;
+}
 #finalScore {
   color: rgb(51, 43, 36);
+  font-size: 60px;
 }
 #highScoresList {
   list-style: none;
@@ -7,4 +12,7 @@
 }
 .high-score {
   font-size: 2.8rem;
+}
+li {
+  font-size: 40px;
 }

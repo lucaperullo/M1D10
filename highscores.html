@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>High Scores</title>
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/9/9f/Arcade_machine_icon.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="highscores.css" />
     <link rel="stylesheet" href="style.css" />
     <link
@@ -15,6 +24,16 @@
     />
   </head>
   <body>
+    <i
+      style="padding: 60px; position: absolute"
+      onclick="playOrPause()"
+      class="fas fa-music"
+    >
+      <audio>
+        <source src="bgleaderboardmusic.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </i>
     <video autoplay muted loop id="myVideo">
       <source src="bgscoreboard.mp4" type="video/mp4" />
     </video>
@@ -22,7 +41,9 @@
       <div id="highScores" class="flex-center flex-column">
         <h1 id="finalScore">Leaderboard</h1>
         <ul id="highScoresList"></ul>
-        <a href="/" class="btn">Go back to Home<i class="fas fa-home"></i></a>
+        <a style="background-color: rgb(196, 55, 55)" href="/" class="btn"
+          >Go back to Home<i class="fas fa-home"></i
+        ></a>
       </div>
     </div>
     <script src="highscores.js"></script>

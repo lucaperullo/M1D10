@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enter your name!</title>
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/9/9f/Arcade_machine_icon.png"
+    />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -14,6 +18,16 @@
     />
   </head>
   <body>
+    <i
+      style="padding: 60px; position: absolute"
+      onclick="playOrPause()"
+      class="fas fa-music"
+    >
+      <audio>
+        <source src="bgmusic.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </i>
     <video autoplay muted loop id="myVideo">
       <source src="bg.mp4" type="video/mp4" />
     </video>
