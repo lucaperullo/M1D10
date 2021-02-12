@@ -1,0 +1,114 @@
+:root {
+  background-color: rgb(50, 51, 33);
+}
+#myVideo {
+  z-index: -1;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Orbitron", sans-serif;
+}
+h1 {
+  color: white;
+  margin-bottom: 5rem;
+}
+h2 {
+  margin-bottom: 4rem;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-center {
+  justify-content: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.text-center {
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.btn {
+  font-size: 1.4rem;
+  padding: 2rem 0;
+  width: 30rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 255, 0.377);
+  backdrop-filter: blur(10px);
+  border-radius: 4px;
+}
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 0px 3px blue;
+  transform: scale(1.03);
+}
+.btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+#highscore-btn {
+  background: yellow;
+}
+#highscore-btn:hover {
+  box-shadow: 0 0.4rem 1.4rem 0 rgb(26, 19, 19);
+}
+/* End page css */
+.end-form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30rem;
+}
+input {
+  margin-bottom: 1rem;
+  width: 20rem;
+  padding: 1.5rem;
+  border: none;
+  box-shadow: 0 0.1rem 1.4rem 0 rgb(160, 160, 177);
+}
+input::placeholder {
+  color: #aaa;
+}
+#username {
+  margin-bottom: 3rem;
+  width: 100%;
+  outline: none;
+}
+#end-text {
+  color: white;
+  text-align: center;
+}
+#saveScoreBtn {
+  border: none;
+}
+i {
+  margin-left: 1rem;
+  font-size: 20px;
+  color: black;
+}
