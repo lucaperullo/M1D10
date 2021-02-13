@@ -104,6 +104,8 @@ input::placeholder {
 }
 #saveScoreBtn {
   border: none;
+  background-color: rgba(31, 30, 36, 0.575);
+  backdrop-filter: blur(110px);
 }
 i {
   margin-left: 1rem;
