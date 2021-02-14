@@ -1,0 +1,30 @@
+{
+  "name": "M1D10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "end.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucaperullo/M1D10.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucaperullo/M1D10/issues"
+  },
+  "homepage": "https://github.com/lucaperullo/M1D10#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "uniqid": "^5.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7"
+  }
+}

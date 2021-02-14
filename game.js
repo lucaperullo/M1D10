@@ -88,16 +88,17 @@ startGame = () => {
 };
 getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionsCounter > MAX_QUESTIONS) {
+    //if there are no questions this save the last score to the ls and push the page to /end.html
     localStorage.setItem("mostRecentScore", score);
     return window.location.assign("/end.html");
   }
 
-  questionCounter++;
-  progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
-  progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
-  const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
-  currentQuestion = availableQuestions[questionsIndex];
-  question.innerText = currentQuestion.question;
+  questionCounter++; //this is going question for question 1 by 1
+  progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`; //this is counting the questions
+  progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`; //this updates the question progress bar
+  const questionsIndex = Math.floor(Math.random() * availableQuestions.length); //randomize the questions each time
+  currentQuestion = availableQuestions[questionsIndex]; //assining the currentQuestion to the question we re at in a specific moment
+  question.innerText = currentQuestion.question; //add the question to the question field
   choices.forEach((choice) => {
     const number = choice.dataset["number"];
     choice.innerText = currentQuestion["choice" + number];
